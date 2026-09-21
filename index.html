@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Mundo Matemático de Lulu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon">🔺</div>
+        <div>
+          <h1>El Mundo Matemático de Lulu</h1>
+          <p>Construye su mundo usando las matemáticas</p>
+        </div>
+      </div>
+      <div class="progress-pill">
+        <span id="missionCounter">Misión 1 de 5</span>
+        <div class="progress-track"><div id="progressBar" class="progress-fill"></div></div>
+      </div>
+    </header>
+
+    <main>
+      <section id="introScreen" class="screen intro-screen">
+        <div class="intro-card">
+          <div class="intro-lulu">
+            <img src="assets/lulu.svg" alt="Lulu, el oso geométrico">
+          </div>
+          <div class="intro-copy">
+            <span class="eyebrow">🌎 PRIMER MUNDO</span>
+            <h2>La casa de Lulu</h2>
+            <p>
+              Lulu llegó a un mundo nuevo y necesita construir una casa
+              antes de que llegue la lluvia.
+            </p>
+            <p class="highlight">¿La ayudas a construirla usando las matemáticas?</p>
+            <button id="startBtn" class="primary-btn">Comenzar aventura →</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="gameScreen" class="screen hidden">
+        <div class="world-card">
+          <div class="sky">
+            <div class="cloud cloud-1">☁️</div>
+            <div class="cloud cloud-2">☁️</div>
+            <div class="sun">☀️</div>
+
+            <div class="mountain mountain-back"></div>
+            <div class="mountain mountain-front"></div>
+
+            <div class="tree tree-1">🌳</div>
+            <div class="tree tree-2">🌳</div>
+            <div class="flower flower-1">🌷</div>
+            <div class="flower flower-2">🌼</div>
+
+            <div id="house" class="house stage-0" aria-label="Casa de Lulu">
+              <div class="house-shadow"></div>
+              <div class="house-wall wall-left"></div>
+              <div class="house-wall wall-right"></div>
+              <div class="house-roof">
+                <div class="roof-shape"></div>
+              </div>
+              <div class="house-window window-left"></div>
+              <div class="house-window window-right"></div>
+              <div class="house-door"></div>
+              <div class="house-knob"></div>
+              <div class="chimney"></div>
+            </div>
+
+            <div class="lulu-world">
+              <img src="assets/lulu.svg" alt="Lulu">
+              <div class="lulu-name">Lulu</div>
+            </div>
+
+            <div id="rain" class="rain hidden">
+              <span>💧</span><span>💧</span><span>💧</span><span>💧</span>
+              <span>💧</span><span>💧</span><span>💧</span><span>💧</span>
+            </div>
+
+            <div class="ground"></div>
+          </div>
+
+          <div class="world-status">
+            <div class="material">
+              <span class="material-icon">🧱</span>
+              <div>
+                <strong id="blocksCount">0</strong>
+                <small>bloques</small>
+              </div>
+            </div>
+            <div class="house-status">
+              <span>Construcción</span>
+              <div class="mini-track"><div id="houseProgress" class="mini-fill"></div></div>
+              <strong id="housePercent">0%</strong>
+            </div>
+          </div>
+        </div>
+
+        <section class="mission-card">
+          <div class="mission-heading">
+            <div class="mission-badge" id="missionIcon">🧱</div>
+            <div>
+              <span class="eyebrow" id="missionLabel">MISIÓN 1</span>
+              <h2 id="missionTitle">¿Cuántos necesitamos?</h2>
+            </div>
+          </div>
+
+          <p id="missionText" class="mission-text"></p>
+
+          <div id="challengeArea" class="challenge-area"></div>
+
+          <div id="feedback" class="feedback" aria-live="polite"></div>
+        </section>
+      </section>
+
+      <section id="finishScreen" class="screen hidden">
+        <div class="finish-card">
+          <div class="finish-scene">
+            <div class="finish-cloud">☁️ ☁️ ☁️</div>
+            <div class="finished-house">
+              <div class="finished-roof"></div>
+              <div class="finished-wall">
+                <div class="finished-window"></div>
+                <div class="finished-door"></div>
+              </div>
+            </div>
+            <img src="assets/lulu.svg" class="finish-lulu" alt="Lulu">
+            <div class="rain-finish">💧 💧 💧 💧 💧</div>
+          </div>
+
+          <span class="eyebrow">🎉 PRIMER MUNDO COMPLETADO</span>
+          <h2>¡Lulu ya tiene su casa!</h2>
+          <p>
+            Comenzó a llover, pero Lulu está protegida y tiene un lugar
+            donde descansar.
+          </p>
+          <div class="learning-box">
+            <strong>Lo construiste usando matemáticas.</strong>
+            <span>Contaste, ordenaste, comparaste, resolviste problemas y reconociste figuras.</span>
+          </div>
+          <button id="restartBtn" class="primary-btn">Jugar nuevamente ↻</button>
+          <p class="future-note">Este es solo el primer mundo de Lulu. 🌎</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Una aventura creada para aprender jugando 💛</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
