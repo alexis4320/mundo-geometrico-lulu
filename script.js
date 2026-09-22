@@ -3,7 +3,7 @@ const missions = [
     number: 1,
     icon: "🧱",
     title: "¿Cuántos necesitamos?",
-    text: "Lulu necesita <strong>5 rectángulos</strong> para comenzar a construir las paredes de su casa. ¿Cuántos necesita?",
+    text: "Lulu necesita 🧱🧱🧱🧱🧱. ¿Cuántos necesita?",
     type: "number",
     options: [3, 5, 7],
     answer: 5,
@@ -13,22 +13,22 @@ const missions = [
     number: 2,
     icon: "➕",
     title: "¿Cuántos faltan?",
-    text: "Lulu necesita <strong>8 rectángulos</strong> para su casa y ya tiene 5. ¿Cuántos le faltan?",
+    text: "Lulu necesita 🧱🧱🧱🧱🧱🧱🧱🧱 para su casa y tiene 5. ¿Cuántos le faltan?",
     type: "number",
-    options: [2, 3, 4],
-    answer: 3,
+    options: ["🧱🧱", "🧱🧱🧱", "🧱🧱🧱🧱"],
+    answer: "🧱🧱🧱",
     reward: "3 bloques"
   },
   {
     number: 3,
     icon: "🔢",
     title: "Ponlos en orden",
-    text: "Lulu encontró estos números. ¿Cuál está ordenado de menor a mayor?",
+    text: "Lulu encontró estos números {4,2,3,5,1}. ¿Ordena de Mayor a Menor?",
     type: "sequence",
     options: [
-      {label: "1 — 2 — 3 — 4 — 5", value: "correct"},
+      {label: "1 — 2 — 3 — 4 — 5", value: "wrong"},
       {label: "1 — 3 — 2 — 4 — 5", value: "wrong"},
-      {label: "5 — 4 — 3 — 2 — 1", value: "wrong"}
+      {label: "5 — 4 — 3 — 2 — 1", value: "correct"}
     ],
     answer: "correct",
     reward: "Ordenar los materiales"
@@ -37,7 +37,7 @@ const missions = [
     number: 4,
     icon: "⚖️",
     title: "¿Dónde hay más?",
-    text: "Lulu necesita encontrar el grupo que tiene <strong>más bloques</strong>. ¿Cuál debe elegir?",
+    text: "¿Donde hay <strong>más bloques</strong>?",
     type: "groups",
     options: [
       {label: "A", count: 4},
@@ -51,7 +51,7 @@ const missions = [
     number: 5,
     icon: "🔺",
     title: "El techo de Lulu",
-    text: "La casa está casi lista. Lulu necesita una figura que tenga <strong>3 lados</strong>. ¿Cuál debe utilizar?",
+    text: "¿Cual figura tiene <strong>3 lados</strong>?",
     type: "shape",
     options: [
       {label: "Triángulo", shape: "triangle", value: "triangle"},
