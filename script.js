@@ -99,6 +99,10 @@ function startGame() {
   finishScreen.classList.add("hidden");
   gameScreen.classList.remove("hidden");
 
+  const backgroundMusic = document.getElementById("backgroundMusic");
+  backgroundMusic.volume = 0.25;
+  backgroundMusic.play();
+
   state.currentMission = 0;
   state.blocks = 0;
   state.completed = false;
